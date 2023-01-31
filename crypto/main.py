@@ -79,3 +79,17 @@ match user_input:
         exit()
 
 update(amount,portfolio,name,password)
+print('\n\n\nAccount Balance:\n\n\n')
+print(f'${amount} left in your account')
+if len(portfolio) > 0:
+    for name in portfolio:
+        if portfolio[name] == 0:
+            pass
+        else: 
+            for crypto in current_crypto:
+                if not name == crypto['Name']:
+                    pass
+                else:
+                    crypto_price = crypto['Price']
+                    print(f'You have {portfolio[name]} {name} coins worth ${portfolio[name]*crypto_price}')
+                
